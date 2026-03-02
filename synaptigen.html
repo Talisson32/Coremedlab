@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synaptigen</title>
+    <link rel="stylesheet" href="synaptigen.css">
+    <link rel="icon" href="Files_synaptigen/faviconV2.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div class="cookie-overlay">
+        <div class="cookie-modal">
+            <a href="SEU_LINK_AQUI" class="cookie-close">&times;</a>
+            
+            <h2>We Value Your Privacy</h2>
+            <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. Please choose your preference below.</p>
+            
+            <div class="cookie-buttons">
+                <a href="http://synaptigen24.com/text.php#aff=TalissonCosta" class="btn-cookie btn-reject">Reject</a>
+                <a href="http://synaptigen24.com/text.php#aff=TalissonCosta" class="btn-cookie btn-accept">Accept</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">SYNAPTIGEN</div>
+            <div class="nav-center">
+                <a href="#">Ingredients</a>
+                <a href="#">FREE Bonuses</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="btn-order">Order Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-container">
+            
+            <div class="hero-content">
+                <h1>A Breakthrough Natural Solution That Supports A Healthy Memory Well Into Old Age</h1>
+                
+                <div class="badges-container">
+                    <img src="Files_synaptigen/certificados.png" alt="Selos de Qualidade" class="badges-img">
+                </div>
+            </div>
+
+            <div class="hero-image-box">
+                <div class="image-wrapper">
+                    <img src="Files_synaptigen/product.png" alt="Synaptigen Bottle" class="product-img">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="bottom-banner">
+        <div class="banner-container">
+            
+            <div class="banner-item">
+                <div class="check-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="banner-text">
+                    <span class="light-text">HEALTHY</span><br>
+                    <span class="bold-text">BRAIN SUPPORT</span>
+                </div>
+            </div>
+
+            <div class="banner-item">
+                <div class="check-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="banner-text">
+                    <span class="light-text">CLEAR</span><br>
+                    <span class="bold-text">MIND AID</span>
+                </div>
+            </div>
+
+            <div class="banner-item">
+                <div class="check-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="banner-text">
+                    <span class="light-text">SUSTAINED</span><br>
+                    <span class="bold-text">MENTAL AGILITY</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var cookieOverlay = document.querySelector('.cookie-overlay');
+            
+            setTimeout(function() {
+                cookieOverlay.style.display = 'flex';
+            }, 1000); 
+        });
+    </script>
+
 </body>
 </html>
