@@ -1,0 +1,294 @@
+/* =========================================
+   RESETS E CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+.nav-container, .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   CABEÇALHO (HEADER)
+   ========================================= */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0b1f40; /* Azul bem escuro */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #174291;
+}
+
+.btn-order-header {
+    background-color: #0b1f40;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-order-header:hover {
+    background-color: #174291;
+}
+
+/* =========================================
+   SEÇÃO PRINCIPAL (HERO)
+   ========================================= */
+.hero-section {
+    /* Degradê azul de fundo baseado na imagem */
+    background: linear-gradient(135deg, #173887 0%, #2f69c5 50%, #52a3ee 100%);
+    min-height: calc(100vh - 80px); /* Preenche a tela tirando a altura do header */
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Textos da Esquerda */
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #e0f0ff; /* Branco levemente azulado para leitura suave */
+}
+
+.btn-order-hero {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0b1f40;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-order-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem da Direita */
+.hero-image-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.product-img {
+    width: 100%;
+    max-width: 550px; /* Ajuste dependendo do tamanho real da sua imagem cortada */
+    height: auto;
+    object-fit: contain;
+    /* Adiciona um leve efeito de flutuação se a imagem for PNG transparente */
+    filter: drop-shadow(0px 20px 30px rgba(0,0,0,0.2)); 
+}
+
+/* =========================================
+   POP-UP DE COOKIES (CONTENT LOCKER)
+   ========================================= */
+.cookie-overlay {
+    display: none; /* O script altera isso para 'flex' */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo ainda mais escuro para destaque */
+    z-index: 9999; 
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.cookie-modal {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cookie-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #888;
+    text-decoration: none;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.cookie-close:hover {
+    color: #e74c3c;
+}
+
+.cookie-modal h2 {
+    font-size: 22px;
+    color: #2b3136;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cookie-modal p {
+    font-size: 14px;
+    color: #5b6268;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-cookie {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.btn-reject {
+    background-color: #f1f1f1;
+    color: #5b6268;
+    border: 1px solid #ddd;
+}
+
+.btn-reject:hover {
+    background-color: #e2e2e2;
+    color: #2b3136;
+}
+
+.btn-accept {
+    background-color: #174291;
+    color: #ffffff;
+    border: 1px solid #174291;
+}
+
+.btn-accept:hover {
+    background-color: #0b1f40;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 900px) {
+    .hero-section {
+        padding: 40px 0;
+        min-height: auto;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content br {
+        display: none; /* Remove quebras de linha para adaptar melhor no celular */
+    }
+
+    .hero-image-box {
+        justify-content: center;
+    }
+
+    .nav-link {
+        display: none; /* Esconde os links do menu para focar no botão */
+    }
+}
+
+@media (max-width: 480px) {
+    .cookie-buttons {
+        flex-direction: column;
+    }
+}
